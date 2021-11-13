@@ -67,7 +67,7 @@ function draw() {
   background(255);
   
 //In function draw(), Set the x-Position of the kangaroo according to the camera
-camera.position.x = cars[index - 1].position.x;
+kangaroo.x=camera.position.x-270;
 
   if (gameState===PLAY){
 
@@ -127,7 +127,9 @@ function spawnShrubs() {
   if (frameCount % 150 === 0) {
 
 //Set the x-position of the shrub according to the game camera.
-kangaroo.x=camera.position.x-270;
+var shrub  = createSprite(camera.position.x+500,330,40,10);
+
+
  
     shrub.velocityX = -(6 + 3*score/100)
     shrub.scale = 0.6;
